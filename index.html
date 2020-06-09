@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>TicTacToe</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -12,6 +12,59 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
+      <h1>Tic-Tac-Toe</h1>
+      <main>
+        <p id="message"></p>
+        <section>
+          <h1>Sign Up</h1>
+          <div class="show">
+                  <form id="sign-up">
+                    <input type="email" name="credentials[email]" placeholder="email">
+                    <input type="password" name="credentials[password]" placeholder="password">
+                    <input type="password" name="credentials[password_confirmation]" placeholder="password confirmation">
+                    <button type="submit">Sign Up</button>
+                  </form>
+            <h1>Sign In</h1>
+                  <div class="show">
+                    <form id="sign-in">
+                    <input type="email" name="credentials[email]" placeholder="email">
+                    <input type="password" name="credentials[password]" placeholder="password">
+                    <button type="submit">Sign in</button>
+                    </form>
+                  </div>
+                     <div class="hidden">
+                <h1>Sign Out</h1>
+
+                    <form id="sign-out">
+                    <button type="submit">Sign out</button>
+                    </form>
+                  </div>
+                  <div>
+             <h1>Change passwords</h1>
+                    <form id="change-password">
+                      <input type="email" name="credentials[email]" placeholder="email">
+                      <input type="password" name="credentials[password]" placeholder="password">
+                      <input type="password" name="credentials[password_confirmation]" placeholder="password confirmation">
+                      <button type="submit">Change password</button>
+                    </form>
+                  </div>
+        </section>
+
+        <div class="container">
+        <div class="row">
+           <div class="col-4 box" id="one"></div>
+           <div class="col-4 box" id="two"></div>
+           <div class="col-4 box" id="three"></div>
+           <div class="col-4 box" id="four"></div>
+           <div class="col-4 box" id="five"></div>
+           <div class="col-4 box" id="six"></div>
+           <div class="col-4 box" id="seven"></div>
+           <div class="col-4 box" id="eight"></div>
+           <div class="col-4 box" id="nine"></div>
+         </div>
+         </div>
+
+
+      </main>
     </body>
 </html>
