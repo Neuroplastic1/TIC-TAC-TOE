@@ -1,9 +1,24 @@
 @import '~bootstrap/scss/bootstrap';
+@import '~bootstrap/scss/bootstrap';
 
- .hidden {
-   display: none;
- }
+$alt-color: $cyan;
+$body-bg-color: $gray-200;
+$font-color: $light;
 
- .show {
-    display: block;
- }
+body {
+  background-color: $body-bg-color;
+}
+
+.box {
+  align-items: center;
+  background-color: $secondary;
+  border: 1px solid $white;
+  color: $font-color;
+  display: flex;
+  height: 80px;
+  justify-content: center;
+}
+
+.alt-color {
+  background-color: $alt-color;
+}

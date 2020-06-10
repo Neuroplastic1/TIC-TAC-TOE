@@ -1,6 +1,6 @@
 // hold all ajax requests
 'use strict'
-
+// for config for api url
 const config = require('./../config')
 const store = require('./../store.js')
 // are these the correct path above?

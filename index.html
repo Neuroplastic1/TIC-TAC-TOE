@@ -16,32 +16,37 @@
       <main>
         <p id="message"></p>
         <section>
-          <h1>Sign Up</h1>
+
           <div class="show">
+
                   <form id="sign-up">
+                    <h1>Sign Up</h1>
                     <input type="email" name="credentials[email]" placeholder="email">
                     <input type="password" name="credentials[password]" placeholder="password">
                     <input type="password" name="credentials[password_confirmation]" placeholder="password confirmation">
                     <button type="submit">Sign Up</button>
                   </form>
-            <h1>Sign In</h1>
-                  <div class="show">
+
+
                     <form id="sign-in">
+                      <h1>Sign In</h1>
                     <input type="email" name="credentials[email]" placeholder="email">
                     <input type="password" name="credentials[password]" placeholder="password">
                     <button type="submit">Sign in</button>
                     </form>
-                  </div>
+
                      <div class="hidden">
-                <h1>Sign Out</h1>
+
 
                     <form id="sign-out">
+                      <h1>Sign Out</h1>
                     <button type="submit">Sign out</button>
                     </form>
                   </div>
                   <div>
-             <h1>Change passwords</h1>
+
                     <form id="change-password">
+                      <h1>Change passwords</h1>
                       <input type="email" name="credentials[email]" placeholder="email">
                       <input type="password" name="credentials[password]" placeholder="password">
                       <input type="password" name="credentials[password_confirmation]" placeholder="password confirmation">
@@ -49,10 +54,13 @@
                     </form>
                   </div>
         </section>
-
-        <div class="container">
+        <div>
+          <form id='play-game-button'>
+          <button type="submit">Play Game</button>
+           </form>
+        <div class="container" id='game-board'>
         <div class="row">
-           <div class="col-4 box" id="one"></div>
+           <div data-index=0 class="col-4 box" id="one"></div>
            <div class="col-4 box" id="two"></div>
            <div class="col-4 box" id="three"></div>
            <div class="col-4 box" id="four"></div>
