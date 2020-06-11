@@ -18,5 +18,5 @@ $(() => {
   $('#change-password').hide()
   $('#play-game-button').hide()
   $('#game-board').hide()
-  $('.box').on('click',)
+  $('.box').on('click', gameEvents.onClickBox)
 })

@@ -1,24 +1,21 @@
 @import '~bootstrap/scss/bootstrap';
-@import '~bootstrap/scss/bootstrap';
-
-$alt-color: $cyan;
-$body-bg-color: $gray-200;
-$font-color: $light;
-
-body {
-  background-color: $body-bg-color;
+.container {
+  // Set the whole board's height to take up 100 percent
+  // of the viewports height (browser height)
+  height: 100vh;
 }
-
+.board {
+  // Set the max size of the board
+  // 100vh means 100% of the browsers height
+  // Subtrack 75 px to give it some spacing at the bottom
+  max-height: calc(100vh - 75px);
+  max-width: calc(100vh - 75px);
+}
 .box {
-  align-items: center;
-  background-color: $secondary;
-  border: 1px solid $white;
-  color: $font-color;
-  display: flex;
-  height: 80px;
-  justify-content: center;
-}
-
-.alt-color {
-  background-color: $alt-color;
+  // borders:
+  // This will give borders on the right and bottom of each box
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  // Set the box's height to be 1/3 of the parent's height (.board)
+  min-height: calc(100% / 3);
 }
