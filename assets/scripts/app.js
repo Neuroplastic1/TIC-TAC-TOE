@@ -4,6 +4,7 @@
 // const example = require('./example')
 const authEvents = require('./TTT-auth/events.js')
 const gameEvents = require('./TTT-game/events-game.js')
+const clickEvents = require('./TTT-game/api-game.js')
 // use require without a reference to ensure a file is bundled
 // require('./example')
 $(() => {
@@ -19,4 +20,16 @@ $(() => {
   $('#play-game-button').hide()
   $('#game-board').hide()
   $('.box').on('click', gameEvents.onClickBox)
+  $('#game-stat').on('click', clickEvents.onClickStat)
+
+  //$('#slot-0').on('click', clickEvents.updateGame)
+  //$('#slot-1').on('click', clickEvents.updateGame)
+  //$('#slot-2').on('click', clickEvents.updateGame)
+  //$('#slot-3').on('click', clickEvents.updateGame)
+  //$('#slot-4').on('click', clickEvents.updateGame)
+  //$('#slot-5').on('click', clickEvents.updateGame)
+  //$('#slot-6').on('click', clickEvents.updateGame)
+  //$('#slot-7').on('click', clickEvents.updateGame)
+  //$('#slot-8').on('click', clickEvents.updateGame)
 })
+//

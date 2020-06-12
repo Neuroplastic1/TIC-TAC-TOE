@@ -31,3 +31,8 @@ const updateGame = function (Data) {
     }
   })
 }
+
+module.exports = {
+  updateGame,
+  createGame
+}

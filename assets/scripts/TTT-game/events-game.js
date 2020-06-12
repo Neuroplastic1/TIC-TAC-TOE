@@ -4,6 +4,9 @@ const api = require('./api-game')
 const ui = require('./ui-game')
 const store = require('./../store')
 let player = true
+//oh my precious winning logic
+
+
 
 
 
@@ -19,12 +22,14 @@ const onPlayGame = function (event) {
 }
 const onClickBox = function (event) {
   const index = $(event.target).attr('data-index')
-  const value = player ? 'o' : 'x'
+  console.log('clicked')
+  //const value = player ? 'o' : 'x'
   player = !player
+
 
 const data = {
     index,
-    value
+    player
     // over: store.game.over
 
   }

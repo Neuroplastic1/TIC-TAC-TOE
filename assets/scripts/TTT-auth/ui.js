@@ -35,8 +35,8 @@ const onSignOutSuccess = function (response) {
   $('#message').text('Signed out successfully')
   $('form').trigger('reset')
   store.user = response.user
-  $('#sign-up').show()
-  $('#sign-in').show()
+  //$('#sign-up').show()
+  //$('#sign-in').show()
 
 }
 
