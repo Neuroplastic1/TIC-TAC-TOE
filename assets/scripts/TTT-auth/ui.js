@@ -35,14 +35,34 @@ const onSignOutSuccess = function (response) {
   $('#message').text('Signed out successfully')
   $('form').trigger('reset')
   store.user = response.user
-  //$('#sign-up').show()
-  //$('#sign-in').show()
-
+  $('#sign-up').show()
+  $('#sign-in').show()
 }
 
+const onSignOutFailiure = function (response) {
+  $('#message').text('Sign out failed')
+  $('form').trigger('reset')
+}
+
+const onChangePasswordSuccess = function (response) {
+  $('#message').text('CPassW successfully')
+  $('form').trigger('reset')
+  store.user = response.user
+  $('#sign-up').show()
+  $('#sign-in').show()
+}
+
+const onChangePasswordFailiure = function (response) {
+  $('#message').text('CPassw failed')
+  $('form').trigger('reset')
+}
 module.exports = {
-onSignUpSuccess,
-onSignUpFailure,
-onSignInSuccess,
-onSignInFailure
+  onSignUpSuccess,
+  onSignUpFailure,
+  onSignInSuccess,
+  onSignInFailure,
+  onSignOutSuccess,
+  onSignOutFailiure,
+  onChangePasswordSuccess,
+  onChangePasswordFailiure
 }
