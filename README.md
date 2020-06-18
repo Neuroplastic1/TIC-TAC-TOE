@@ -19,7 +19,7 @@ Before user is signed in
 sign up form
 sign in form
 
-(https://i.imgur.com/KvANE72.jpg)
+![Tic-Tac-Toe Wireframe](https://i.imgur.com/KvANE72.jpg)
  
 After user is Signed-in, allow user to access:
 change password form
