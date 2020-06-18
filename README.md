@@ -2,7 +2,7 @@
 Tic Tac Toe is a double player game played on a 3x3 grid, where each player takes turn Synchronously to occupy one spot and the first player to occupy three spots in a straight line wins otherwise the game ends with a tie in between the players.
  
  
-# Technologies Used
+## Technologies Used
  JavaScript,
  HTML,
  jQuery,
@@ -11,10 +11,10 @@ Tic Tac Toe is a double player game played on a 3x3 grid, where each player take
  CSS,
  cURL
  
-# User stories
+## User stories
 As a user in this game, I want to be able to sign-up and then sign-in. After being signed-in i want to be able play a new game by accessing 3x3 grid board. I want to be able to add X/O to the board synchronously rotating in between two players. I want the game to log win/lose/tie messages on the page after every game. After the game ends I want to be able to start a new game by pressing a new game button. I want the game to store  the amount of gamesnthat has been played through a button.
  
-# Wireframes
+## Wireframes
 Before user is signed in give access to 
 sign up form and sign in form.
 
