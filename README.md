@@ -1,5 +1,5 @@
 # Tic Tac Toe
-Tic Tac Toe is a double player 3x3 grid game where each player takes turn Synchronously to occupy one spot and the first player to occupy three spots in a straight line wins otherwise the game ends with a tie in between the players.
+Tic Tac Toe is a double player game played on a 3x3 grid, where each player takes turn Synchronously to occupy one spot and the first player to occupy three spots in a straight line wins otherwise the game ends with a tie in between the players.
  
  
 # Technologies Used
