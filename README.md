@@ -19,7 +19,7 @@ Before user is signed in
 sign up form
 sign in form
 
-https://imgur.com/KvANE72
+<blockquote class="imgur-embed-pub" lang="en" data-id="KvANE72"><a href="//imgur.com/KvANE72"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
  
 After user is Signed-in, allow user to access:
 change password form
