@@ -4,12 +4,12 @@ Tic Tac Toe is a double player 3x3 grid game where each player takes turn Synchr
  
 # Technologies Used
 
-JavaScript
-HTML
-jQuery
-Bootstrap
-Flexbox
-CSS
+JavaScript,
+HTML,
+jQuery,
+Bootstrap,
+Flexbox,
+CSS,
 cURL
  
 # User stories
@@ -17,7 +17,7 @@ As a user in this game I want to be able to sign-up and then sign-in. After bein
  
 # Wireframes
 Before user is signed in 
-sign up form
+sign up form,
 sign in form
 
 ![Tic-Tac-Toe Wireframe](https://i.imgur.com/KvANE72.jpg)
