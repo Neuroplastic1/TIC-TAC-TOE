@@ -24,3 +24,6 @@ After user is Signed-in, allow user to access
 change password form, sign out button, play game button (when clicked, displays the board for them to play), game stats button (when click, displays the number of games they’ve played).
 
 ![Tic-Tac-Toe Wireframe](https://imgur.com/QB3AJS7.jpg)
+
+## Unresolved actions
+my sigh out button does not take me to first page.
