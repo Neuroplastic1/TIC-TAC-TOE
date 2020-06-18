@@ -27,4 +27,4 @@ sign out button
 play game button (when clicked, displays the board for them to play)
 game stats button (when click, displays the number of games they’ve played)
 
-(https://i.imgur.com/QB3AJS7.jpg)
+[Imgur](https://imgur.com/QB3AJS7)
