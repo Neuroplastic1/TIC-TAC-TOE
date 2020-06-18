@@ -19,7 +19,7 @@ Before user is signed in
 sign up form
 sign in form
 
-[img]https://i.imgur.com/KvANE72.jpg[/img]
+[img](https://i.imgur.com/KvANE72.jpg)[/img]
  
 After user is Signed-in, allow user to access:
 change password form
