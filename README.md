@@ -3,6 +3,7 @@ Tic Tac Toe is a double player 3x3 grid game where each player takes turn Synchr
  
  
 # Technologies Used
+
 JavaScript
 HTML
 jQuery
@@ -27,4 +28,4 @@ sign out button
 play game button (when clicked, displays the board for them to play)
 game stats button (when click, displays the number of games they’ve played)
 
-[Imgur](https://imgur.com/QB3AJS7)
+![Tic-Tac-Toe Wireframe](https://imgur.com/QB3AJS7.jpg)
