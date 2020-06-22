@@ -43,21 +43,23 @@ const changePassword = function (formData) {
     },
     data: {
       passwords: {
-        old: formData.passwords.old,
-        new: formData.passwords.new
+        old: formData.password.old,
+        new: formData.password.new
       }
     }
   })
 }
+
 const signOut = function () {
   return $.ajax({
-    url: config.apiUrl + '/sign-out',
     method: 'DELETE',
+    url: config.apiUrl + '/sign-out',
     headers: {
       Authorization: 'Token token=' + store.user.token
     }
   })
 }
+
 module.exports = {
   signUp,
   signIn,

@@ -1,4 +1,4 @@
-// file for event handlers
+/// file for event handlers
 'use strict'
 
 const api = require('./api')
@@ -8,53 +8,46 @@ const getFormFields = require('../../../lib/get-form-fields.js')
 const onSignUp = function (event) {
   event.preventDefault()
 
+  console.log('sign up worked')
+  // call the api function
   const form = event.target
+
   const data = getFormFields(form)
-  console.log(data)
-  console.log(form)
-
-  // use api.js to get data from base
+  // call the api functions
   api.signUp(data)
-
-    .then(ui.signUpSuccess)
-    .catch(ui.signUpFailure)
+    .then(ui.onSignUpSuccess)
+    .catch(ui.onSignUpFailure)
 }
-
+// handler- functions - .then for success & .catch method for failiure
 const onSignIn = function (event) {
   event.preventDefault()
 
+  console.log('sign in worked')
+
   const form = event.target
+
   const data = getFormFields(form)
-  console.log(data)
-  console.log(form)
 
   api.signIn(data)
-
-    .catch(ui.signInFailure)
+    .then(ui.onSignInSuccess)
+    .catch(ui.onSignInFailure)
 }
+
 const onSignOut = function (event) {
-  event.preventDefault()
-  console.log('sign out complete')
-
-  const form = event.target
-  const data = getFormFields(form)
-
-  api.signOut(data)
-
-    .then(ui.signOutSuccess)
-    .catch(ui.signOutFailure)
+  api.signOut()
+    .then(ui.onSignOutSuccess)
+    .catch(ui.onSignOutFailure)
 }
 
 const onChangePassword = function (event) {
   event.preventDefault()
   console.log('change password ran')
 
-  const form = event.target
-  const data = getFormFields(form)
-  api.changePassword(data)
+  const data = getFormFields(event.target)
 
+  api.changePassword(data)
     .then(ui.changePasswordSuccess)
-    .catch(ui.chagePasswordFailure)
+    .catch(ui.changePasswordFailure)
 }
 
 module.exports = {

@@ -1,3 +1,6 @@
+//ajax jquery request
+//request ->o method ->0
+
 'use strict'
 const config = require('./../config')
 const store = require('./../store.js')
@@ -9,13 +12,10 @@ const createGame = function (data) {
     headers: {
       Authorization: 'Token token=' + store.user.token
     },
-    data: {
-    }
+    data: {}
   })
 }
-module.exports = {
-  createGame
-}
+
 const updateGame = function (Data) {
   return $.ajax({
     method: 'PATCH',
@@ -31,8 +31,19 @@ const updateGame = function (Data) {
     }
   })
 }
+const getGames = function (formData) {
+  return $.ajax({
+    method: 'GET',
+    url: config.apiUrl + '/games/',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data: ''
+  })
+}
 
 module.exports = {
   updateGame,
-  createGame
+  createGame,
+  getGames
 }

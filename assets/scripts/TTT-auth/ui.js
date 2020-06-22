@@ -17,18 +17,19 @@ const onSignUpFailure = function (response) {
 const onSignInSuccess = function (response) {
   console.log(response)
   $('#message').text('Signed in successfully user email ' + response.user.email)
-  $('form').trigger('reset')
   store.user = response.user
+  //$('form').trigger('reset')
   $('#sign-out').show()
   $('#change-password').show()
   $('#play-game-button').show()
   $('#sign-up').hide()
   $('#sign-in').hide()
+  $('#game-board').hide()
 }
 
 const onSignInFailure = function (response) {
   $('#message').text('Sign in failed')
-  $('form').trigger('reset')
+  //$('form').trigger('reset')
 }
 
 const onSignOutSuccess = function (response) {
@@ -37,6 +38,9 @@ const onSignOutSuccess = function (response) {
   store.user = response.user
   $('#sign-up').show()
   $('#sign-in').show()
+  $('#sign-out').hide()
+  $('#play-game-button').hide()
+  $('#change-password').hide()
 }
 
 const onSignOutFailiure = function (response) {
@@ -45,9 +49,8 @@ const onSignOutFailiure = function (response) {
 }
 
 const onChangePasswordSuccess = function (response) {
-  $('#message').text('CPassW successfully')
+  $('#message').text('Password Changed!')
   $('form').trigger('reset')
-  store.user = response.user
   $('#sign-up').show()
   $('#sign-in').show()
 }
@@ -56,6 +59,7 @@ const onChangePasswordFailiure = function (response) {
   $('#message').text('CPassw failed')
   $('form').trigger('reset')
 }
+
 module.exports = {
   onSignUpSuccess,
   onSignUpFailure,
@@ -65,4 +69,5 @@ module.exports = {
   onSignOutFailiure,
   onChangePasswordSuccess,
   onChangePasswordFailiure
+
 }

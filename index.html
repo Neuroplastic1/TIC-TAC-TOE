@@ -4,20 +4,17 @@
       <title>TicTacToe</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
+      <!-- Do not add `link` tags-->
       <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
-     <script>   </script>
+      <!-- Do not add `script` tags-->
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
       <h1>Tic-Tac-Toe</h1>
-      <main>
         <p id="message"></p>
         <section>
-
-          <div>
 
                   <form id="sign-up">
                     <h1>Sign Up</h1>
@@ -28,6 +25,7 @@
                   </form>
 
 
+
                     <form id="sign-in">
                       <h1>Sign In</h1>
                     <input type="email" name="credentials[email]" placeholder="email">
@@ -35,9 +33,8 @@
                     <button type="submit">Sign in</button>
                     </form>
 
+
                      <div>
-
-
                     <form id="sign-out">
                       <h1>Sign Out</h1>
                     <button type="submit">Sign out</button>
@@ -47,38 +44,29 @@
 
                     <form id="change-password">
                       <h1>Change passwords</h1>
-                      <input type="email" name="credentials[email]" placeholder="email">
-                      <input type="password" name="credentials[password]" placeholder="password">
-                      <input type="password" name="credentials[password_confirmation]" placeholder="password confirmation">
-                      <button type="submit">Change password</button>
+                    <input required placeholder="Old Password" type="password" name="password[old]">
+                    <input required placeholder="New password" type="password" name="password[new]">
+                    <button type="submit">Change password</button>
                     </form>
                   </div>
-        </section>
-      </div>
+                   </section>
+
           <form id='play-game-button'>
           <button type="submit">Play Game</button>
-          <form id="game-stat">
-     <button type="submit">Game stats?</button>
-     </form>
-
            </form>
-        <div class="container" id='game-board'>-
+
+        <div class="container" id='game-board'>
         <div class="row h-100 board">
-           <div data-index=0 class="col-4 box" id="slot-0">
-             <span class="fas fas-camera"></span>
-           </div>
-           <div data-index=1 class="col-4 box" id="slot-1"></div>
-           <div data-index=2 class="col-4 box" id="slot-2"></div>
-           <div data-index=3 class="col-4 box" id="slot-3"></div>
-           <div data-index=4 class="col-4 box" id="slot-4"></div>
-           <div data-index=5 class="col-4 box" id="slot-5"></div>
-           <div data-index=6 class="col-4 box" id="slot-6"></div>
-           <div data-index=7 class="col-4 box" id="slot-7"></div>
-           <div data-index=8 class="col-4 box" id="slot-8"></div>
+           <div data-index=0 class="col-4 box" id="one"> 1 c</div>
+           <div data-index=1 class="col-4 box" id="two"> 2 </div>
+           <div data-index=2 class="col-4 box" id="three"> 3 </div>
+           <div data-index=3 class="col-4 box" id="four"> 4 /div>
+           <div data-index=4 class="col-4 box" id="five"> 5 </div>
+           <div data-index=5 class="col-4 box" id="six"> 6 </div>
+           <div data-index=6 class="col-4 box" id="seven"></div>
+           <div data-index=7 class="col-4 box" id="eight"></div>
+           <div data-index=8 class="col-4 box" id="nine"></div>
          </div>
          </div>
-
-
-      </main>
     </body>
 </html>
