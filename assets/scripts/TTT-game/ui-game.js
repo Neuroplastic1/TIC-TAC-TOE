@@ -1,4 +1,4 @@
-const store = require('./../store.js')
+'user strict'
 
 const onGamebuttonSuccess = function (response) {
   console.log(response)
@@ -9,16 +9,11 @@ const onGamebuttonSuccess = function (response) {
 const onGameButtonFailiure = function (response) {
   event.preventDefault()
   $('#message').text('Sign out failed')
-  //$('form').trigger('reset')
+  // $('form').trigger('reset')
 }
-// const onClickStat = function (response) {
-//   console.log(response)
-//   $('#message').text('oops! no judgment zone')
-//   $('form').trigger('reset')
-//   store.user = response.user
-// }
+
 module.exports = {
   onGamebuttonSuccess,
   onGameButtonFailiure
-  //onClickStat
+
 }

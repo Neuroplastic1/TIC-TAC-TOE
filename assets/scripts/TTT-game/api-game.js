@@ -1,4 +1,4 @@
-//ajax jquery request
+// ajax jquery request
 //request ->o method ->0
 
 'use strict'
