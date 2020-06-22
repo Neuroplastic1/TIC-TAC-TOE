@@ -1,5 +1,5 @@
 // ajax jquery request
-//request ->o method ->0
+// request ->o method ->0
 
 'use strict'
 const config = require('./../config')
@@ -37,8 +37,8 @@ const getGames = function (formData) {
     url: config.apiUrl + '/games/',
     headers: {
       Authorization: 'Token token=' + store.user.token
-    },
-    data: ''
+    }
+
   })
 }
 

@@ -4,6 +4,8 @@ const store = require('/Users/shafqatumair/sei/projects/TIC-TAC-TOE/assets/scrip
 let player = true
 const onPlayGame = function (event) {
   event.preventDefault()
+  store.trackBoard = ['', '', '', '', '', '', '', '', '']
+  store.currentPlayer = 'x'
   api.createGame()
     .then(ui.onGamebuttonSuccess)
     .catch(ui.onGamebuttonFaoilure)

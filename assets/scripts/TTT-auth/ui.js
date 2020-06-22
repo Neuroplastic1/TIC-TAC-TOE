@@ -18,7 +18,7 @@ const onSignInSuccess = function (response) {
   console.log(response)
   $('#message').text('Signed in successfully user email ' + response.user.email)
   store.user = response.user
-  //$('form').trigger('reset')
+  //  $('form').trigger('reset')
   $('#sign-out').show()
   $('#change-password').show()
   $('#play-game-button').show()
@@ -29,7 +29,7 @@ const onSignInSuccess = function (response) {
 
 const onSignInFailure = function (response) {
   $('#message').text('Sign in failed')
-  //$('form').trigger('reset')
+  // $('form').trigger('reset')
 }
 
 const onSignOutSuccess = function (response) {
