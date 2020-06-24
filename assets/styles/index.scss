@@ -28,7 +28,7 @@
   //                   repeated on the X or Y axis.
   // `center center` - sets the `background-position` attribute, which center's
   //                   the images along the X and Y axis respectively
-  background: url('public/cat.jpg') no-repeat center center;
+  background: white;
 
   // Scales the image as large as possible without stretching the image.
   // The image will be cropped since its proportions are different from the `board` div.
@@ -68,8 +68,8 @@
   //       can see the image behind it.
   background-color: white;
 
-  // Set the x's and o's to white
-  color: white;
+  // Set the x's and o's to black;
+  color: black;
 
   // Adds a shadow to the X's and O's.
   // The shadow is placed 2px to the right and 2px below the text, respectively.
@@ -110,7 +110,48 @@
 
   // When you hover over a box
   &:hover {
-    // Set the background color to a light blue
+    // Set the background color
     background-color: LightSkyBlue;
   }
+}
+
+h1 {
+  font-size: 100px;
+  font-weight: bold;
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+}
+
+#notification {
+  text-align: center;
+}
+#sign-in {
+  text-align: center;
+}
+ #sign-up {
+  text-align: center;
+}
+#change-password {
+  text-align: center;
+}
+#sign-out {
+  text-align: center;
+}
+#message {
+  text-align: center;
+}
+#stats {
+  text-align: center;
+}
+#play-game {
+  text-align: center;
+}
+#display-winner {
+  text-align: center;
+}
+#playerturn {
+  text-align: center;
 }

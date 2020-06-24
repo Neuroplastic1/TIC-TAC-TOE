@@ -1,35 +1,22 @@
 'use strict'
 
-// use require with a reference to bundle the file and use it in this file
-// const example = require('./example')
+// here we initially loads all the jQuery event listeners
+
 const authEvents = require('./TTT-auth/events.js')
-const gameEvents = require('./TTT-game/events-game.js')
-const clickEvents = require('./TTT-game/api-game.js')
-// use require without a reference to ensure a file is bundled
-// require('./example')
+const gamesEvents = require('./TTT-game/events-games.js')
+
 $(() => {
-  // your JS code goes here
   $('#sign-up').on('submit', authEvents.onSignUp)
   $('#sign-in').on('submit', authEvents.onSignIn)
-  $('#sign-out').on('submit', authEvents.onSignOut)
   $('#change-password').on('submit', authEvents.onChangePassword)
-  $('#play-game-button').on('submit', gameEvents.onPlayGame)
-  $('#game-board').on('submit', gameEvents.onPlayGame)
-  $('#sign-out').hide()
-  $('#change-password').hide()
-  $('#play-game-button').hide()
-  $('#game-board').hide()
-  $('.box').on('click', gameEvents.onClickBox)
-  $('#game-stat').on('click', clickEvents.onClickStat)
-
-  //$('#slot-0').on('click', clickEvents.updateGame)
-  //$('#slot-1').on('click', clickEvents.updateGame)
-  //$('#slot-2').on('click', clickEvents.updateGame)
-  //$('#slot-3').on('click', clickEvents.updateGame)
-  //$('#slot-4').on('click', clickEvents.updateGame)
-  //$('#slot-5').on('click', clickEvents.updateGame)
-  //$('#slot-6').on('click', clickEvents.updateGame)
-  //$('#slot-7').on('click', clickEvents.updateGame)
-  //$('#slot-8').on('click', clickEvents.updateGame)
+  $('#sign-out').on('submit', authEvents.onSignOut)
+  $('.row').hide()
+  $('#new-game').hide()
+  $('#play-game').on('submit', gamesEvents.onCreateGame)
+  $('.box').on('click', gamesEvents.onUpdateGame)
+  $('#Change-password').hide()
+  $('#play-game').hide()
+  $('.buttons').hide()
+  $('#stats').on('submit', gamesEvents.onGetGames)
+  $('.box').css('background', 'transparent')
 })
-//

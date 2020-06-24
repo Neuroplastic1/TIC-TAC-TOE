@@ -1,16 +1,14 @@
-// hold all ajax requests
-'use strict'
-// for config for api url
+
+// the AJAX Jquery realestate
+
 const config = require('./../config')
 const store = require('./../store.js')
-// are these the correct path above?
-
-const signUp = function (formData) {
+// User sign up
+const userCreate = function (formData) {
   return $.ajax({
-    method: 'POST',
     url: config.apiUrl + '/sign-up',
-    // data
-    // data: data
+    method: 'POST',
+
     data: {
       credentials: {
         email: formData.credentials.email,
@@ -21,10 +19,11 @@ const signUp = function (formData) {
   })
 }
 
-const signIn = function (formData) {
+const userSignIn = function (formData) {
   return $.ajax({
-    method: 'POST',
     url: config.apiUrl + '/sign-in',
+    method: 'POST',
+
     data: {
       credentials: {
         email: formData.credentials.email,
@@ -43,24 +42,26 @@ const changePassword = function (formData) {
     },
     data: {
       passwords: {
-        old: formData.passwords.old,
-        new: formData.passwords.new
+        old: formData.password.old,
+        new: formData.password.new
       }
     }
   })
 }
+
 const signOut = function () {
   return $.ajax({
-    url: config.apiUrl + '/sign-out',
     method: 'DELETE',
+    url: config.apiUrl + '/sign-out',
     headers: {
       Authorization: 'Token token=' + store.user.token
     }
   })
 }
+
 module.exports = {
-  signUp,
-  signIn,
-  signOut,
-  changePassword
+  userCreate,
+  userSignIn,
+  changePassword,
+  signOut
 }
