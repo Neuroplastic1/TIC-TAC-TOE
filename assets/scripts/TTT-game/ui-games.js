@@ -1,7 +1,7 @@
 const store = require('./../store.js')
 
 const onGetGamesSuccess = (response) => {
-  $('#message').text(`You successfully retrived your previous games! Games played:${response.games.length}`)
+  $('#message').text(`total Games played:${response.games.length}`)
   $('#message1').hide()
 }
 const onGetGamesFailure = (response) => {

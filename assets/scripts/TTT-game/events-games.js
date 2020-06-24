@@ -42,7 +42,7 @@ const onUpdateGame = function (event) {
   let winner
   if (board[0] === board[1] && board[0] === board[2] && board[0] !== '') {
     event.preventDefault()
-    $('.row').hide()
+    //$('.row').hide()
     $('#display-winner').show().text(`Player ${board[0]} won! play new game!`)
     store.game.over = true
     $('#playerturn').text('')
@@ -51,7 +51,7 @@ const onUpdateGame = function (event) {
     winner = true
   } else if (board[3] === board[4] && board[4] === board[5] && board[3] !== '') {
     event.preventDefault()
-    $('.row').hide()
+    //$('.row').hide()
     $('#display-winner').show().text(`Player ${board[3]} won! play new game!`)
     store.game.over = true
     $('#playerturn').text('')
@@ -59,7 +59,7 @@ const onUpdateGame = function (event) {
     $('.success').text('')
     winner = true
   } else if (board[6] === board[7] && board[7] === board[8] && board[6] !== '') {
-    $('.row').hide()
+    //$('.row').hide()
     $('#display-winner').show().text(`Player ${board[6]} won! play New game!`)
     store.game.over = true
     $('#playerturn').text('')
@@ -67,7 +67,7 @@ const onUpdateGame = function (event) {
     $('.success').text('')
     winner = true
   } else if (board[0] === board[4] && board[4] === board[8] && board[0] !== '') {
-    $('.row').hide()
+    //$('.row').()
     $('#display-winner').show().text(`Player ${board[0]} won!`)
     store.game.over = true
     $('#playerturn').text('')
@@ -75,7 +75,7 @@ const onUpdateGame = function (event) {
     $('.success').text('')
     winner = true
   } else if (board[2] === board[4] && board[4] === board[6] && board[2] !== '') {
-    $('.row').hide()
+    //$('.row').hide()
     $('#display-winner').show().text(`Player ${board[2]} won!`)
     store.game.over = true
     $('#playerturn').text('')
@@ -83,7 +83,7 @@ const onUpdateGame = function (event) {
     $('.success').text('')
     winner = true
   } else if (board[1] === board[4] && board[4] === board[7] && board[1] !== '') {
-    $('.row').hide()
+    //$('.row').hide()
     $('#display-winner').show().text(`Player ${board[1]} won!`)
     store.game.over = true
     $('#playerturn').text('')
@@ -91,7 +91,7 @@ const onUpdateGame = function (event) {
     $('.success').text('')
     winner = true
   } else if (board[0] === board[3] && board[3] === board[6] && board[0] !== '') {
-    $('.row').hide()
+    //$('.row').hide()
     $('#display-winner').show().text(`Player ${board[0]} won!`)
     store.game.over = true
     $('#playerturn').text('')
@@ -99,7 +99,7 @@ const onUpdateGame = function (event) {
     $('.success').text('')
     winner = true
   } else if (board[2] === board[5] && board[5] === board[8] && board[2] !== '') {
-    $('.row').hide()
+    //$('.row').hide()
     $('#display-winner').show().text(`Player ${board[2]} won!`)
     store.game.over = true
     $('#playerturn').text('')
@@ -109,7 +109,7 @@ const onUpdateGame = function (event) {
   }
 
   if (winner === false && store.game.cells.every(e => e !== '')) {
-    $('.row').hide()
+    //$('.row').hide()
     $('#display-winner').show().text("It's a tie!")
     store.game.over = true
     $('#playerturn').text('')
