@@ -1,21 +1,21 @@
 @import '~bootstrap/scss/bootstrap';
 
 .container {
-  // Set the board's container to take up 100 percent of the
+  // Set the square's container to take up 100 percent of the
   // viewport's height (the height of the browser)
   height: 100vh;
 }
 
-.board {
+.square {
   // Set the margins to auto. When the left and right
   // margins are set to auto, they will be the same.
-  // Which ends up centering the board in between the margins.
+  // Which ends up centering the square in between the margins.
   margin: auto;
 
-  // Sets the maximum size of the board.
+  // Sets the maximum size of the square.
   // 100vh means 100% of the viewport (browser's) height
   // We subtract -75px so there is space at the bottom
-  // We use the same value for height and width so the board is a square.
+  // We use the same value for height and width so the square is a square.
   max-height: calc(100vh - 75px);
   max-width: calc(100vh - 75px);
 
@@ -31,7 +31,7 @@
   background: white;
 
   // Scales the image as large as possible without stretching the image.
-  // The image will be cropped since its proportions are different from the `board` div.
+  // The image will be cropped since its proportions are different from the `square` div.
   background-size: cover;
 }
 
@@ -59,7 +59,7 @@
 
 
   // Set the minimum height for each box to be a third of their parent's height
-  // (board's height)
+  // (square's height)
   min-height: calc(100% / 3);
 
 
@@ -115,13 +115,13 @@
   }
 }
 
-h1 {
+h2 {
   font-size: 100px;
   font-weight: bold;
   text-align: center;
 }
 
-h2 {
+h3 {
   text-align: center;
 }
 

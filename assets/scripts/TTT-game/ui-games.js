@@ -1,3 +1,4 @@
+
 const store = require('./../store.js')
 
 const onGetGamesSuccess = (response) => {
@@ -22,6 +23,10 @@ const onUpdateGameSuccess = (response) => {
 const onUpdateGameFailure = (response) => {
   $('#message').text('Real Estate occupied!')
 }
+const onGameEndSuccess = (response) => {
+  $('.row').hide()
+  $('#message').text('gameover!')
+}
 
 module.exports = {
   onCreateGameSuccess,
@@ -29,5 +34,6 @@ module.exports = {
   onGetGamesSuccess,
   onGetGamesFailure,
   onUpdateGameSuccess,
-  onUpdateGameFailure
+  onUpdateGameFailure,
+  onGameEndSuccess
 }
