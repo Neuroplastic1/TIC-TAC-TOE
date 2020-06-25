@@ -1,5 +1,5 @@
 // sends AJAX requests to GA's backend API (GET, POST, PATCH)
-
+// updateGame save user
 const config = require('./../config')
 const store = require('./../store.js')
 
