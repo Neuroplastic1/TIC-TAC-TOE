@@ -5,9 +5,9 @@ const ui = require('./ui-games')
 const store = require('./../store.js')
 
 const onCreateGame = function (event) {
-  event.preventDefault()
+  // event.preventDefault()
   $('.box').html('')
-
+  event.preventDefault()
   currentPlayer = 'x'
   $('.row').show()
   $('#display-winner').hide()
@@ -17,13 +17,13 @@ const onCreateGame = function (event) {
     .then(ui.onCreateGameSuccess)
     .catch(ui.onCreateGameFailure)
 }
-
-let currentPlayer = 'o'
+let winner = false
+let currentPlayer = 'x'
 
 const onUpdateGame = function (event) {
   event.preventDefault()
 
-  if ($(event.target).is(':empty')) {
+  if ($(event.target).is(':empty') && winner === false) {
     store.game.cells[$(event.target).data('cell-index')] = currentPlayer
     // add player to html square
     $(event.target).text(currentPlayer)
@@ -39,7 +39,6 @@ const onUpdateGame = function (event) {
     return 'invalid move'
   }
   const square = store.game.cells
-  let winner
   if (square[0] === square[1] && square[0] === square[2] && square[0] !== '') {
     event.preventDefault()
     $('#display-winner').show().text(`Player ${square[1]} won!`)
