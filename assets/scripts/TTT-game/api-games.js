@@ -16,16 +16,16 @@ const createGame = function (response) {
 
 const updateGame = (index, currentPlayer) => {
   return $.ajax({
-    method: 'PATCH',
     url: config.apiUrl + '/games/' + store.game._id,
+    method: 'PATCH',
     headers: {
       Authorization: 'Token token=' + store.user.token
     },
     data: {
       game: {
         cell: {
-          index: index,
-          value: currentPlayer
+          index: 0,
+          value: 'x'
         },
         over: store.game.over
       }

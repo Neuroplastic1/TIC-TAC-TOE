@@ -11,6 +11,8 @@ const onGetGamesFailure = (response) => {
 const onCreateGameSuccess = (response) => {
   $('#message').text('Another one!')
   $('.row').show()
+  // $('.').trigger('reset')
+  // $('.row').restartGame()
   store.game = response.game
   store.games = response.games
 }
