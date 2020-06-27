@@ -17,7 +17,7 @@ const onCreateGame = function (event) {
     .then(ui.onCreateGameSuccess)
     .catch(ui.onCreateGameFailure)
 }
-
+let winner = false
 let currentPlayer = 'o'
 
 const onUpdateGame = function (event) {
@@ -36,10 +36,10 @@ const onUpdateGame = function (event) {
     $('#playerturn').show().text('turn for ' + currentPlayer + ' ')
   } else {
     $('#message').show().text('Real Estate Occupied!')
-    return 'invalid move'
+    return
   }
+  //  let winner
   const square = store.game.cells
-  let winner
   if (square[0] === square[1] && square[0] === square[2] && square[0] !== '') {
     event.preventDefault()
     $('#display-winner').show().text(`Player ${square[1]} won!`)
@@ -75,7 +75,6 @@ const onUpdateGame = function (event) {
   } else if (square[1] === square[4] && square[4] === square[7] && square[1] !== '') {
     $('#display-winner').show().text(`Player ${square[4]} won!`)
     store.game.over = true
-
     $('#playerturn').text('')
     $('#message').text('')
     winner = true
@@ -91,8 +90,7 @@ const onUpdateGame = function (event) {
     $('#playerturn').text('')
     $('#message').text('')
     winner = true
-  }
-  if (winner === false && store.game.cells.every(e => e !== '')) {
+  } if (winner === false && store.game.cells.every(e => e !== '')) {
     $('#display-winner').show().text("It's a tie!")
     store.game.over = true
     $('#playerturn').text('')
@@ -100,7 +98,7 @@ const onUpdateGame = function (event) {
     $('.success').text('')
   }
   const index = $(event.target).data('cell-index')
-  api.updateGame(index, currentPlayer)
+  api.updateGame(index, 'x')
     .then(ui.onUpdateGameSuccess)
     .catch(ui.onUpdateGameFailure)
 }

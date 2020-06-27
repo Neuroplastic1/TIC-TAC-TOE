@@ -18,5 +18,4 @@ $(() => {
   $('#play-game').hide()
   $('.buttons').hide()
   $('#stats').on('submit', gamesEvents.onGetGames)
-  // $('.box').css('backgroundcolor', 'green')
 })
