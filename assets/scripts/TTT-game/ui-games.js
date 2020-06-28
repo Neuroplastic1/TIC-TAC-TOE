@@ -9,12 +9,12 @@ const onGetGamesFailure = (response) => {
   $('#message').text('Unable to get the requested games.')
 }
 const onCreateGameSuccess = (response) => {
-  $('#message').text('Another one!')
+  $('#message').text('Ready to play!')
+  $('#message').show()
   $('.row').show()
-  // $('.').trigger('reset')
+  // $('.box').trigger('reset')
   // $('.row').restartGame()
   store.game = response.game
-  store.games = response.games
 }
 const onCreateGameFailure = (response) => {
   $('#message').text('Unable to create a new game.')
@@ -23,11 +23,7 @@ const onUpdateGameSuccess = (response) => {
   $('#message').text('well done!')
 }
 const onUpdateGameFailure = (response) => {
-  $('#message').text('Real Estate occupied!')
-}
-const onGameEndSuccess = (response) => {
-  $('.row').hide()
-  $('#message').text('gameover!')
+  $('#message').text('Estate occupied!')
 }
 
 module.exports = {
@@ -36,6 +32,5 @@ module.exports = {
   onGetGamesSuccess,
   onGetGamesFailure,
   onUpdateGameSuccess,
-  onUpdateGameFailure,
-  onGameEndSuccess
+  onUpdateGameFailure
 }
