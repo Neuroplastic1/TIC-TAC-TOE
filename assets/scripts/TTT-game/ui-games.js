@@ -23,11 +23,7 @@ const onUpdateGameSuccess = (response) => {
   $('#message').text('well done!')
 }
 const onUpdateGameFailure = (response) => {
-  $('#message').text('Real Estate occupied!')
-}
-const onGameEndSuccess = (response) => {
-  $('.row').hide()
-  $('#message').text('gameover!')
+  $('#message').text('well done!')
 }
 
 module.exports = {
@@ -36,6 +32,5 @@ module.exports = {
   onGetGamesSuccess,
   onGetGamesFailure,
   onUpdateGameSuccess,
-  onUpdateGameFailure,
-  onGameEndSuccess
+  onUpdateGameFailure
 }
