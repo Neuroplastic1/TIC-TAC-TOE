@@ -7,7 +7,11 @@ const store = require('./../store.js')
 const onCreateGame = function (event) {
   event.preventDefault()
   $('.box').html('')
-
+  // next line is turning box click user event back on after new game s=button is activated
+  $('.box').on('click', onUpdateGame)
+  $(event.target).is(':empty')
+  store.currentPlayer = 'x'
+  winner = false
   currentPlayer = 'x'
   $('.row').show()
   $('#display-winner').hide()
@@ -36,9 +40,7 @@ const onUpdateGame = function (event) {
     $('#playerturn').show().text('turn for ' + currentPlayer + ' ')
   } else {
     $('#message').show().text('Real Estate Occupied!')
-    return
   }
-  //  let winner
   const square = store.game.cells
   if (square[0] === square[1] && square[0] === square[2] && square[0] !== '') {
     event.preventDefault()
@@ -92,6 +94,7 @@ const onUpdateGame = function (event) {
     winner = true
   } if (winner === false && store.game.cells.every(e => e !== '')) {
     $('#display-winner').show().text("It's a tie!")
+    winner = true
     store.game.over = true
     $('#playerturn').text('')
     $('#message').text('')
@@ -101,6 +104,12 @@ const onUpdateGame = function (event) {
   api.updateGame(index, 'x')
     .then(ui.onUpdateGameSuccess)
     .catch(ui.onUpdateGameFailure)
+
+  if (winner === true && store.game.over === true) {
+    // reset the game and any other necessery actions
+    // prevent user from taking further action on board
+    $('.box').off('click', onUpdateGame)
+  }
 }
 
 const onGetGames = function (event) {

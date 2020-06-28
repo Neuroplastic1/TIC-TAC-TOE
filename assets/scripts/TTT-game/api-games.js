@@ -32,7 +32,6 @@ const updateGame = (index, currentPlayer) => {
     }
   })
 }
-
 const getGames = function () {
   return $.ajax({
     method: 'GET',
