@@ -7,7 +7,7 @@ const store = require('./../store.js')
 const onCreateGame = function (event) {
   event.preventDefault()
   $('.box').html('')
-  // next line is turning box click user event back on after new game s=button is activated
+  // next line is turning box click user event back on after new game button is activated
   $('.box').on('click', onUpdateGame)
   $(event.target).is(':empty')
   store.currentPlayer = 'x'
