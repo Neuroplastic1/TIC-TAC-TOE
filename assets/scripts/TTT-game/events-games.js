@@ -4,13 +4,17 @@ const api = require('./api-games')
 const ui = require('./ui-games')
 const store = require('./../store.js')
 
+let winner = false
+let currentPlayer = 'x'
+
 const onCreateGame = function (event) {
   event.preventDefault()
-  // clear up very box
+  // clear up every box
   $('.box').html('')
   // next line is activating click events on any box class after game board initiated
   $('.box').on('click', onUpdateGame)
   // $(event.target).is(':empty')
+  // each time start with 'x from store '
   store.currentPlayer = 'x'
   $('.row').show()
   $('#playerturn').show().text("It's player " + currentPlayer + 's turn!')
@@ -19,8 +23,6 @@ const onCreateGame = function (event) {
     .then(ui.onCreateGameSuccess)
     .catch(ui.onCreateGameFailure)
 }
-let winner = false
-let currentPlayer = 'x'
 
 const onUpdateGame = function (event) {
   event.preventDefault()
@@ -40,7 +42,7 @@ const onUpdateGame = function (event) {
     $('#message').show().text('Well done!!')
   }
   const square = store.game.cells
-  if (square[0] === square[1] && square[1] === square[2] && square[0] !== '') {
+  if (square[0] === square[1] && square[1] === square[2] && square[2] !== '') {
     store.game.over = true
     $('#playerturn').show().text(`Player ${square[1]} won!`)
     winner = true
@@ -72,7 +74,7 @@ const onUpdateGame = function (event) {
     $('#playerturn').show().text(`Player ${square[5]} won!`)
     store.game.over = true
     winner = true
-  } if (winner === false && store.game.cells.every(e => e !== '')) {
+  } if (winner === false && store.game.cells.every(cells => cells !== '')) {
     $('#playerturn').show().text("It's a tie!")
     winner = true
     store.game.over = true

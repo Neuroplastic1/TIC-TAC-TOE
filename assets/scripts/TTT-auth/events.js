@@ -28,7 +28,7 @@ const onSignIn = function (event) {
     .then(ui.userSignInSuccess)
     .catch(ui.userSignInFailure)
 }
-const onSignOut = function () {
+const onSignOut = function (event) {
   event.preventDefault()
   api.signOut()
     .then(ui.signOutSuccess)
