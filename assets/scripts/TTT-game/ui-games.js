@@ -20,10 +20,10 @@ const onCreateGameFailure = (response) => {
   $('#message').text('Unable to create a new game.')
 }
 const onUpdateGameSuccess = (response) => {
-  $('#message').text('well done!')
+  $('#message').text('Well done!')
 }
 const onUpdateGameFailure = (response) => {
-  $('#message').text('well done!')
+  $('#message').text('Well done!')
 }
 
 module.exports = {
