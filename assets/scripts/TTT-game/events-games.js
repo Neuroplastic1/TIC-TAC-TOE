@@ -12,8 +12,6 @@ const onCreateGame = function (event) {
   $('.box').on('click', onUpdateGame)
   // $(event.target).is(':empty')
   store.currentPlayer = 'x'
-  // winner = false
-  //   currentPlayer = 'x'
   $('.row').show()
   $('#playerturn').show().text("It's player " + currentPlayer + 's turn!')
 

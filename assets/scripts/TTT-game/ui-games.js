@@ -11,8 +11,6 @@ const onGetGamesFailure = (response) => {
 const onCreateGameSuccess = (response) => {
   $('#message').text('Another one!')
   $('.row').show()
-  // $('.').trigger('reset')
-  // $('.row').restartGame()
   store.game = response.game
   store.games = response.games
 }
@@ -23,7 +21,7 @@ const onUpdateGameSuccess = (response) => {
   $('#message').text('Well done!')
 }
 const onUpdateGameFailure = (response) => {
-  $('#message').text('Well done!')
+  $('#message').text('taken!')
 }
 
 module.exports = {
