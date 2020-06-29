@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Tic-Tac-Toe</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+      <h2>Tic-Tac-Toe</h2>
+      <p id='notification'>Welcome Human!</p>
+      <section id='Sign-up'>
+      <h3>Sign Up</h3>
+      <form id="sign-up">
+        <input type="text" required placeholder="Enter Email" name="credentials[email]">
+        <br>
+        <input type="password" required placeholder="Enter Password" name="credentials[password]">
+        <br>
+        <input type="password" required placeholder="Re-enter Password" name="credentials[password_confirmation]">
+        <br>
+        <button type="submit">Sign Up</button>
+      </form>
+    </section>
+    <br>
+    <section id='Sign-in'>
+      <h3>Sign In</h3>
+      <form id="sign-in">
+        <input type="text" required placeholder="Enter Email" name="credentials[email]">
+        <br>
+        <input type="password" required placeholder="Enter Password" name="credentials[password]">
+        <br>
+        <button type="submit">Sign In</button>
+      </form>
+    </section>
+
+    <div class="buttons">
+      <form id="sign-out">
+        <button type="submit">Sign Out</button>
+      </form>
+      <br>
+      <form id='stats'>
+      <button type='submit'>Game stats</button>
+      </form>
+    </div>
+    <br>
+    <section id='game'>
+    <p id="message"></p>
+    <p id="playerturn"></p>
+      <form id='play-game'>
+        <button id="playgame" type='submit'>play Game</button>
+      </form>
+    </section>
+      <br>
+    <div class="container" id='reset'>
+      <div class="row h-100 square">
+        <div class="col-4 box" data-cell-index='0' id="0"></div>
+        <div class="col-4 box" data-cell-index='1' id="1"></div>
+        <div class="col-4 box" data-cell-index='2' id="2"></div>
+        <div class="col-4 box" data-cell-index='3' id="3"></div>
+        <div class="col-4 box" data-cell-index='4' id="4"></div>
+        <div class="col-4 box" data-cell-index='5' id="5"></div>
+        <div class="col-4 box" data-cell-index='6' id="6"></div>
+        <div class="col-4 box" data-cell-index='7' id="7"></div>
+        <div class="col-4 box" data-cell-index='8' id="8"></div>
+      </div>
+    </div>
+    <br>
+    <section id="Change-password">
+     <form id="change-password">
+       <h3>Change Password</h3>
+       <input required placeholder="Old Password" type="password" name="password[old]">
+       <input required placeholder="New password" type="password" name="password[new]">
+       <button id='chpw' type="submit">Change Password</button>
+     </form>
+    </section>
+    <br>
+
+    </body>
+</html>
