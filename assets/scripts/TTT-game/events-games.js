@@ -42,68 +42,46 @@ const onUpdateGame = function (event) {
     $('#message').show().text('well done!!')
   }
   const square = store.game.cells
-  if (square[0] === square[1] && square[0] === square[2] && square[0] !== '') {
-    event.preventDefault()
-    $('#display-winner').show().text(`Player ${square[1]} won!`)
+  if (square[0] === square[1] && square[1] === square[2] && square[0] !== '') {
     store.game.over = true
-    $('#playerturn').text('')
-    $('#message').text('')
+    $('#display-winner').show().text(`Player ${square[1]} won!`)
     winner = true
   } else if (square[3] === square[4] && square[4] === square[5] && square[3] !== '') {
-    event.preventDefault()
     $('#display-winner').show().text(`Player ${square[4]} won!`)
     store.game.over = true
-    $('#playerturn').text('')
-    $('#message').text('')
     winner = true
   } else if (square[6] === square[7] && square[7] === square[8] && square[6] !== '') {
     $('#display-winner').show().text(`Player ${square[7]} won! `)
     store.game.over = true
-    $('#playerturn').text('')
-    $('#message').text('')
     winner = true
   } else if (square[0] === square[4] && square[4] === square[8] && square[0] !== '') {
     $('#display-winner').show().text(`Player ${square[4]} won!`)
     store.game.over = true
-    $('#playerturn').text('')
-    $('#message').text('')
     winner = true
   } else if (square[2] === square[4] && square[4] === square[6] && square[2] !== '') {
     $('#display-winner').show().text(`Player ${square[4]} won!`)
     store.game.over = true
-    $('#playerturn').text('')
-    $('#message').text('')
     winner = true
   } else if (square[1] === square[4] && square[4] === square[7] && square[1] !== '') {
     $('#display-winner').show().text(`Player ${square[4]} won!`)
     store.game.over = true
-    $('#playerturn').text('')
-    $('#message').text('')
     winner = true
   } else if (square[0] === square[3] && square[3] === square[6] && square[0] !== '') {
     $('#display-winner').show().text(`Player ${square[3]} won!`)
     store.game.over = true
-    $('#playerturn').text('')
-    $('#message').text('')
     winner = true
   } else if (square[2] === square[5] && square[5] === square[8] && square[2] !== '') {
     $('#display-winner').show().text(`Player ${square[5]} won!`)
     store.game.over = true
-    $('#playerturn').text('')
-    $('#message').text('')
     winner = true
   } if (winner === false && store.game.cells.every(e => e !== '')) {
     $('#display-winner').show().text("It's a tie!")
     winner = true
     store.game.over = true
-    $('#playerturn').text('')
-    $('#message').text('')
-    $('.success').text('')
   }
   const index = $(event.target).data('cell-index')
-
   if (winner === true && store.game.over === true) {
-    // reset the game and any other necessery actions
+    // halt the game board (onUpdateGame func)and any other  actions
     // prevent user from taking further action on board
     $('.box').off('click', onUpdateGame)
     api.updateGame(index, currentPlayer)

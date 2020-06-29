@@ -24,8 +24,8 @@ const updateGame = (index, currentPlayer) => {
     data: {
       game: {
         cell: {
-          index: 0,
-          value: 'x'
+          index: index,
+          value: currentPlayer
         },
         over: store.game.over
       }
