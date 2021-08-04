@@ -27,4 +27,4 @@ change password form, sign out button, play game button (when clicked, displays 
 ![Tic-Tac-Toe Wireframe](https://imgur.com/QB3AJS7.jpg)
 
 ## Unresolved actions
-my sigh out button does not take me to first page.
+app currently runs in local server.
